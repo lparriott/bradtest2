@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!--
+
+    Author: Brad Clements
+    Date:   12/03/2023
+
+    Filename: The individual files names as you create the pages
+	
+	Start project: Provided layout in CMIS 410
+	These web pages are for educational purposes only - all content and information should be considered 
+fictional.
+  -->
+   <meta charset="utf-8" >
+ 
+   <!--the lines above belong in every html document, below add your company name to the title, this is displayed on the browser tab -->
+   <title>Rough City Ranch: Restaurant & Bar</title>
+   
+   <!-- the following link to the stylesheets for this webpage  -->
+   <link href="CSS/layout1.css" rel="stylesheet" >
+   <link href="CSS/forms.css" rel="stylesheet" >
+   <script src="CSS/formsubmit.js"></script>
+   <!-- Head information is metadata, or information behind the scenes of the web page, it does not display on the browser  -->
+</head>
+<body>
+
+<!-- The header is where your logo and navigation is created, replace the image and the links with your project images and links  -->
+  <header> 
+  <a href="index.html">
+        <img src="rcr_banner.jpg" alt="RCR Banner" >
+    </a>
+	<nav>
+    <ul>
+        <li><a class="nav-button" href="index.html">Home</a></li>
+        <li><a class="nav-button" href="orderonline.html">Order</a></li>
+        <li><a class="nav-button" href="menu.html">Menu</a></li>
+        <li><a class="nav-button" href="hours.html">Hours</a></li>
+    </ul>
+</nav>
+	</header>
+	<!-- The article section(s) below are the content of your web page, text and images -->
+  <div class="content">
+        <div class="image-container">
+            <img src="food1.jpg" alt="Food Image 1" >
+            <img src="food2.jpg" alt="Food Image 2" >
+			<img src="food3.jpg" alt="Food Image 3" >
+			<img src="food4.jpg" alt="Food Image 4" >
+			<img src="food5.jpg" alt="Food Image 5" >
+			<img src="food6.jpg" alt="Food Image 6" >
+			<img src="food7.jpg" alt="Food Image 7" >
+			
+        </div>
+	 
+<section>
+      <h1>Customer Survey</h1>
+      <p>Thank you for taking our customer survey. Your response 
+         helps RCR maintain the tradition that has made 
+         us the top-rated restaurant in the metro area.
+         All participants are automatically entered into a monthly
+         drawing to receive a <em>$25 Gift Card</em>. Check your e-mail inbox for 
+         contest results. </p>
+      <p>Surveys are private and confidential. RCR will not share your contact information with third 
+         parties, <em>ever</em>. </p>
+      <p>Required values are marked by an asterisk (*)</p>
+	<form id="survey" action="http://www.example.com/rcr/survey" method="post">
+	<fieldset id="custInfo">
+		<legend>Customer Information</legend>	
+		
+	<div class="formRow">
+		<label for="name">Name*</label>
+		<input name="custName" id="name" type="text" placeholder="first and last name" >
+	</div>
+	
+	<div class="formRow">	
+		<label for="street">Street address</label>
+		<input name="custStreet" id="street" type="text" >
+	</div>
+	
+	<div class="formRow">
+		<label for="city">City</label>
+		<input name="custCity" id="city" type="text" value="Tecumseh" >
+	</div>
+	
+	<div class="formRow">	
+		<label for="state">State</label>
+		<input name="custState" id="state" type="text" value="Ne" >
+	</div>
+	
+	<div class="formRow">	
+		<label for="zip">Postal code</label>
+		<input name="custZip" id="zip" type="text" placeholder="nnnnn (-nnnn)">
+	</div>
+	
+	<div class="formRow">	
+		<label for="phone">Phone Number</label>
+		<input name="custPhone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn" >
+	</div>
+	
+	<div class="formRow">	
+		<label for="mail">E-mail*</label>
+		<input name="custEmail" id="mail" type="email" >
+	</div>
+	
+	<div class="formRow">	
+		<label for="dineSpin">How many times do you dine out per month?</label>
+		<input name="dineOut" id="dineSpin" type="number" value="1" step="1" min="0" max="20" >
+	</div>
+	
+	<input name="mailMe" id="mailCB" value="yes" type="checkbox" >
+		<label for="mailCB">Add me to your mailing list for great coupons and specials!</label>
+	
+	<div class="formRow">	
+		<label for="info">Where did you hear about us?<br >
+		(select all that apply)</label>
+		<select name="infoSrc" id="info" size="5" multiple>
+			<option value="internet">Internet</option>
+			<option value="mag">Magazine</option>
+			<option value="news">Newspaper</option>
+			<option value="word">Word of Mouth</option>
+			<option value="other">Other</option>
+		</select>
+	</div>
+	
+	<div class="formRow">
+		<label for="dish">What's your favorite dish?</label>
+		<input name="favDish" id="dish" type="text" list="dishType" >
+			<datalist id="dishType">
+				<option value ="Burger" >
+				<option value ="Chicken Fried Steak" >
+				<option value ="Chicken Strips" >
+				<option value ="Pork Tenderloin Sandwich" >
+				<option value ="Steak" >
+				<option value ="Taco Salad" >
+			</datalist>
+	</div>
+	
+	</fieldset>
+	
+	<fieldset id="expInfo">
+		<legend>Share Your Experience at RCR</legend>
+
+		<div class="formRow">
+			<label for="visit">Date of Visit</label>
+			<input name="visitDate" id="visit" type="date" >
+		</div>
+		
+		<div class="formRow">
+			<label for="order">Order Type</label>
+			<select name="orderType" id="order">
+				<option value="order1">Carry out</option>
+				<option value="order2">Delivery</option>
+				<option value="order3" selected >Dine In</option>
+				<option value="order4">Take 'n Heat</option>
+			</select>
+			
+		</div>
+		
+	
+	<div class="formRow">
+		<label>Was your service friendly?</label>
+			<fieldset class="optGroup">
+				<label for="fYes">Yes</label>
+				<input name="sFriend" id="fYes" value="yes" type="radio" >
+				<label for="fNo">No</label>
+				<input name="sFriend" id="fNo" value="no" type="radio" >
+			</fieldset>
+	</div>
+	
+	<div class="formRow">
+		<label>Was your order correct?</label>
+			<fieldset class="optGroup">
+			<label for="cYes">Yes</label>
+				<input name="oCorrect" id="cYes" value="yes" type="radio" >
+				<label for="cNo">No</label>
+				<input name="oCorrect" id="cNo" value="no" type="radio" >
+			</fieldset>
+	</div>
+	
+	<div class="formRow">
+		<label>Was your food hot?</label>
+			<fieldset class="optGroup">
+			<label for="hYes">Yes</label>
+				<input name="foodHot" id="hYes" value="yes" type="radio" >
+				<label for="hNo">No</label>
+				<input name="foodHot" id="hNo" value="no" type="radio" >
+			</fieldset>
+	</div>
+	
+	<div class="formRow">
+		<label for="rangeBox">Rate the overall service<br> 
+		(0=poor; 10=great) </label>
+		0 
+		<input name="serviceRate" id="rangeBox" type="range" value="5" step="1" min="0" max="10" >
+		10
+	</div>
+	
+	<label for="commaBox">Tell us more about your experience!</label>
+	<textarea name="custExp" id="commaBox"></textarea>
+	
+	</fieldset>
+	
+	<div id="buttons">
+		<input type="submit" value="Submit My Survey" >
+		<input type="reset" value="Canel" >
+	</div>
+	
+	</form>
+     
+   </section>
+   </div>
+   
+    <!-- The footer section below contains contact information, links and social medial link images -->
+
+ <footer>
+    <p>Call Us: <a href="tel:+14025551212">402.555.1212</a>
+    Email Us: <a href="mailto:rcr@gmail.com">rcr@gmail.com</a>
+    Follow Us: <a href="http://www.facebook.com/rcr" target="_blank">http://www.facebook.com/rcr</a></p>
+	<br>
+</footer>
+</body>
+</html>
+
