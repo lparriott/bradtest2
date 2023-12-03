@@ -1,0 +1,243 @@
+@charset "utf-8";
+/*
+   Filename: layout1
+
+   This file contains the layout styles used in the  sample final project base html page.
+
+*/
+
+
+/* layout1.css */
+
+/* Add styles for the unordered list */
+nav ul {
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+    text-align: center; 
+}
+
+/* Add styles for the list items */
+nav ul li {
+    display: inline-block; 
+    margin: 0 2px; 
+}
+
+/* Navigation button styles */
+.nav-button {
+    display: block; 
+    width: 100px;
+    height: 50px; 
+    line-height: 50px; 
+    background-color: black; 
+    color: white; 
+    text-align: center; 
+    text-decoration: none; 
+    margin: 2px; 
+    transition: background-color 0.3s ease; 
+}
+
+.nav-button:hover {
+    background-color: #333; 
+}
+
+
+
+
+.image-container {
+    float: left; 
+    width: 25%; 
+    padding: 10px;
+}
+
+.image-container img {
+    width: 100%; 
+    height: auto; 
+    margin-bottom: 10px; 
+}
+
+.content::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+footer {
+	width: 100%;
+	clear: center;
+	text-align: center;
+	font-size: 0.45em;
+	margin-top: 30px;
+	border-top: 2px solid rgba(50,50,26,1.00);
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+}
+
+.menu-section {
+    margin: 20px auto;
+    width: 90%;
+    padding: 15px;
+}
+
+.menu-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+.menu-table th {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+.menu-table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.menu-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.menu-table tr:hover {
+    background-color: #c8c8c8;
+}
+
+
+.business-hours {
+    text-align: center; 
+    margin: 20px 0; 
+    padding: 15px; 
+}
+
+.business-hours h2 {
+    margin-bottom: 10px; 
+}
+
+.business-hours p {
+    font-size: 2.1em; 
+    margin-bottom: 5px; 
+	
+	
+}
+
+.order-online a {
+  display: inline-block;
+  background-color: black; 
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.order-online a:hover {
+  background-color: #0056b3; 
+}
+
+
+/* =============================================
+	Base layout styles used by mobile devices
+	up to 480px and cascaded to larger devices 
+	unless superceded by other styles.
+   =============================================
+*/
+
+html {
+	height: 100%;
+	background-color: rgba(125,117,116,1.00);
+}
+img, object, embed, video {
+	max-width: 100%;
+}
+header {
+	margin: 10px;
+	width: 96%;
+}
+
+header img {
+	width: 100%;
+}
+
+body {
+	margin-left: auto;
+	margin-right: auto;
+	width: 81.9%;
+	padding-left: 4.55%;
+	padding-right: 4.55%;
+	clear: none;
+	float: none;
+	min-height: 100%;
+}
+/* =============================================
+	Tablet layout styles used by devices
+	481px to 768px and cascaded to larger 
+	devices.
+   =============================================
+*/
+
+@media only screen and (min-width: 481px) {
+body {
+	width: 91.14%;
+	padding-left: 0.93%;
+	padding-right: 0.93%;
+	clear: none;
+	float: none;
+	margin-left: auto;
+}
+nav div {
+	float: left;
+	width: 33.3%
+}
+
+footer {
+	font-size: 1.2em;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline;
+  font-size: 2.2em;
+  padding: 1em;
+}
+}
+
+
+/* =============================================
+	Desktop layout styles used by  devices
+	769px and larger.
+   =============================================
+*/
+
+@media only screen and (min-width: 769px) {
+html {
+	background-color: rgba(80,50,48,1.00);
+	margin: 0px auto;
+}
+body {
+	width: 88.2%;
+	max-width: 800px;
+	padding-left: 0.9%;
+	padding-right: 0.9%;
+	margin: auto;
+	clear: none;
+	float: center;
+	margin-left: auto;
+	background-color: white;
+	-moz-box-shadow: rgba(31, 61, 31, 0.9) 20px 0px 25px,  rgba(31, 61, 31, 0.9) -20px 0px 25px;
+	-webkit-box-shadow: rgba(31, 61, 31, 0.9) 20px 0px 25px,  rgba(31, 61, 31, 0.9) -20px 0px 25px;
+	box-shadow: rgba(31, 61, 31, 0.9) 20px 0px 25px,  rgba(31, 61, 31, 0.9) -20px 0px 25px
+}
+footer {
+	font-size: 1.2em;
+}
+
+}
+
